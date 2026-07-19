@@ -1,0 +1,7 @@
+dependencies:
+  espressif__esp-tflite-micro: 1.0.0
+  lvgl/lvgl: ^9.2.0
+  esp-dl:
+    version: "*"
+  espressif__esp-nn:
+    version: "*"
