@@ -1,4 +1,4 @@
-# Sound-Driven Activity Recognition on ESP32
+# TSC Deployment on ESP32
 
 > A lightweight, real-time environmental sound classification system for smart bathroom activity recognition using TinyML and the ESP32 platform.
 
@@ -83,6 +83,34 @@ The current model classifies the following seven sound categories:
 | 4 | Bathroom Tap |
 | 5 | No Activity |
 | 6 | Shower |
+
+---
+
+# Model: DPNet
+
+The classifier used in this project is **DPNet**, a deep learning model for sound classification. DPNet is a convolutional neural network that learns directly from the **raw audio waveform**, without a spectrogram or MFCC front end.
+
+The model's design and training are maintained in a separate repository. This repository covers only its **deployment** on the ESP32.
+
+🔗 **Model repository:** [DPNet](https://github.com/debolina-34/DPNet)
+
+---
+
+# Dataset
+
+DPNet is trained on **SnaanGhar7**, a custom bathroom sound dataset covering the seven activity classes listed above.
+
+## 🔗 Accessing the Dataset
+
+To access the SnaanGhar7 dataset, please fill out the [Dataset Access Request Form](https://docs.google.com/forms/d/e/1FAIpQLSeG6SI1RTFGJUxEYZn49DJKLeNmeOQVrni4vGBuXhI87fPw9w/viewform?usp=dialog).
+
+**Steps:**
+
+1. Complete the access request form with your details and research purpose
+2. Your request will be reviewed within 2-3 business days
+3. Upon approval, you will receive a download link via email
+
+**License:** CC BY-NC 4.0 (Non-commercial academic use only)
 
 ---
 
@@ -206,24 +234,7 @@ Advantages:
 
 ## 6. Deep Learning Inference
 
-The processed audio is fed into a TensorFlow Lite Micro implementation of **DPNet**, which predicts the most probable activity class.
-
----
-
-# Machine Learning Model
-
-Model: DPNet
-
-Framework:
-
-- TensorFlow
-- TensorFlow Lite
-- TensorFlow Lite Micro
-
-Deployment:
-
-- INT8 Quantized Model
-- Optimized for embedded inference
+The processed audio is fed into a TensorFlow Lite Micro implementation of **DPNet** (see [Model: DPNet](#model-dpnet)), which predicts the most probable activity class.
 
 ---
 
@@ -422,11 +433,11 @@ If you use this work in your research, please cite the repository.
 
 ```
 @misc{sound_activity_recognition,
-  author = {Your Name},
-  title = {Sound-Driven Activity Recognition on ESP32},
+  author = {Jagan G},
+  title = {TSC Deployment on ESP32},
   year = {2026},
   publisher = {GitHub},
-  url = {https://github.com/yourusername/Sound_Driven_Activity_Recognition}
+  url = {https://github.com/jagan007G/TSC_Deployment}
 }
 ```
 
